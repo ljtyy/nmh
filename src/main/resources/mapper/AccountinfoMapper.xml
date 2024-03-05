@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cqie.mapper.AccountInfoMapper">
+
+    <resultMap id="BaseResultMap" type="com.cqie.entity.AccountInfo">
+            <id property="account" column="account" jdbcType="VARCHAR"/>
+            <result property="password" column="password" jdbcType="VARCHAR"/>
+            <result property="accName" column="acc_name" jdbcType="VARCHAR"/>
+            <result property="accPhone" column="acc_phone" jdbcType="VARCHAR"/>
+            <result property="accStatc" column="acc_statc" jdbcType="TINYINT"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        account,password,acc_name,
+        acc_phone,acc_statc,create_time,
+        update_time
+    </sql>
+</mapper>

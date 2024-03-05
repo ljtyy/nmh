@@ -1,0 +1,30 @@
+spring:
+  #    swagger冲突问题
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  datasource:
+    #    driver-class-name: com.mysql.cj.jdbc.Driver
+    #    url: jdbc:mysql://localhost:3306/studb?serverTimezone=UTC
+    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+    url: jdbc:p6spy:mysql://localhost:3306/nmh?serverTimezone=UTC
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+
+
+#  main:
+#    banner-mode: off #关闭spring-boot的图标
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #打印sql语句到控制台
+    auto-mapping-behavior: full
+    map-underscore-to-camel-case: true
+  #  global-config:
+  #    banner: off #关闭mybatis-plus的图标
+  mapper-locations: classpath:/mapper/*Mapper.xml
+
+swagger:
+  enabled: true
+  pathMapping: /

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cqie.mapper.DicMapper">
+
+    <resultMap id="BaseResultMap" type="com.cqie.entity.Dic">
+            <id property="dicId" column="dic_id" jdbcType="INTEGER"/>
+            <result property="dicType" column="dic_type" jdbcType="VARCHAR"/>
+            <result property="dicVal" column="dic_val" jdbcType="VARCHAR"/>
+            <result property="dicCaption" column="dic_caption" jdbcType="VARCHAR"/>
+            <result property="dicState" column="dic_state" jdbcType="TINYINT"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        dic_id,dic_type,dic_val,
+        dic_caption,dic_state,create_time,
+        update_time
+    </sql>
+</mapper>
